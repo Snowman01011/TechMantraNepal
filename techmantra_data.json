@@ -1,0 +1,72 @@
+{
+  "services": [
+    {
+      "id": "web-dev",
+      "name": "Website Development",
+      "description": "High-performance websites crafted with modern architectures like React and Node.",
+      "icon": "Globe",
+      "features": [
+        "Responsive layouts",
+        "SEO optimization Optimization",
+        "Custom design system"
+      ]
+    },
+    {
+      "id": "app-dev",
+      "name": "App Development",
+      "description": "Multi-platform iOS and Android mobile apps designed for seamless user experiences.",
+      "icon": "Smartphone",
+      "features": [
+        "Offline usability",
+        "Native execution performance",
+        "Elegant interaction layouts"
+      ]
+    },
+    {
+      "id": "dig-market",
+      "name": "Digital Marketing",
+      "description": "Strategic campaign coordination and search engine placement to maximize reach.",
+      "icon": "TrendingUp",
+      "features": [
+        "Data-driven analytics",
+        "Content creation systems",
+        "Targeted conversion metrics"
+      ]
+    },
+    {
+      "id": "graph-design",
+      "name": "Graphics Design",
+      "description": "Consistent branding guides and high-impact custom vector art directions.",
+      "icon": "Palette",
+      "features": [
+        "Brand identity packages",
+        "Corporate presentation layouts",
+        "Interactive social structures"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-1",
+      "title": "TechMantra Portal",
+      "category": "Website Development",
+      "description": "A fast portal design featuring a light-dark-green theme system.",
+      "image": "portal_design"
+    },
+    {
+      "id": "proj-2",
+      "title": "Nepal Agro Tech App",
+      "category": "App Development",
+      "description": "Mobile application supporting localized tracking for agriculture.",
+      "image": "agro_app"
+    },
+    {
+      "id": "proj-3",
+      "title": "EcoBrand Identity",
+      "category": "Graphics Design",
+      "description": "Comprehensive sustainable brand guideline and vector suite.",
+      "image": "eco_design"
+    }
+  ],
+  "visitorsCount": 318
+}

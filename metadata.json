@@ -1,0 +1,6 @@
+{
+  "name": "TechMantra Nepal",
+  "description": "Minimal design website with holographic Torus Knot, dotted particle interactive canvas, light-dark-green themes, services, and admin panel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
