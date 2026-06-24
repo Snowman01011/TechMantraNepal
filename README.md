@@ -1,2 +1,2 @@
-# TechMantra Nepal `<a href="https://techmantranepal.com">Offical</a>` Website
+# TechMantra Nepal official `[website](https://www.techmantranepal.com)` Website
 ## Github Actions
