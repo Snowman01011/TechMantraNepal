@@ -1,0 +1,38 @@
+name: Auto Update Git Graph
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-graph:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout full Git history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 0 fetches all branches and history tags
+
+      - name: Generate Graph and Inject to README
+        run: |
+          # 1. Get clean text graph, escaping markdown backticks
+          GRAPH=$(git log --graph --oneline --all | sed 's/`/\\`/g')
+          
+          # 2. Format it into a clean markdown block
+          FORMATTED_GRAPH="\`\`\`text\n${GRAPH}\n\`\`\`"
+          
+          # 3. Replace content between the placeholder tags inside README
+          sed -i '//,//{//!d}' README.md
+          sed -i '//a '"$FORMATTED_GRAPH"'' README.md
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff-index --quiet HEAD || git commit -m "docs: auto-update repository commit graph [skip ci]"
+          git push
