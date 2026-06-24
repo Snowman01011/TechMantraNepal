@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import TorusKnotCanvas from "./components/TorusKnotCanvas";
 import AdminPanel from "./components/AdminPanel";
 import { motion, AnimatePresence } from "motion/react";
+import { Analytics } from "@vercel/analytics/react";
 import { 
   Globe, 
   Smartphone, 
@@ -2555,6 +2556,7 @@ export default function App() {
           </div>
         )}
       </AnimatePresence>
+      <Analytics />
     </div>
   );
 }
