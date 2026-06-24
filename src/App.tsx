@@ -280,7 +280,7 @@ export default function App() {
       {/* Top scroll-depth progress indicator */}
       <div 
         id="scroll-progress-bar"
-        className="fixed top-0 left-0 right-0 h-[3px] z-[10000] origin-left pointer-events-none transition-all duration-100 ease-out"
+        className="fixed top-0 left-0 right-0 h-0.75 z-10000 origin-left pointer-events-none transition-all duration-100 ease-out"
         style={{
           width: `${scrollProgress}%`,
           backgroundColor: theme === "green" ? "#22c55e" : theme === "dark" ? "#f4f4f5" : "#18181b",
@@ -346,7 +346,7 @@ export default function App() {
         securePortalActive={securePortalActive}
       />
 
-      <main className="flex-grow pt-18 relative z-10">
+      <main className="grow pt-18 relative z-10">
         {securePortalActive ? (
           <div className="max-w-7xl mx-auto px-6 py-12">
             <AdminPanel
@@ -416,7 +416,7 @@ export default function App() {
                     </div>
 
                     {/* Right interactive column: 3D Holographic Model Container */}
-                    <div className="lg:col-span-5 w-full h-[380px] sm:h-[450px] lg:h-[500px] relative flex items-center justify-center">
+                    <div className="lg:col-span-5 w-full h-95 sm:h-112.5 lg:h-125 relative flex items-center justify-center">
                       <div className="absolute inset-0 w-full h-full rounded-2xl border border-zinc-800/20 bg-zinc-950/15 backdrop-blur-sm overflow-hidden shadow-2xl">
                         {/* Interactive Hologram Indicator HUD */}
                         <div className="absolute top-4 left-4 z-20 flex items-center space-x-1.5 font-mono text-[9px] uppercase tracking-wider text-zinc-500 select-none">
@@ -515,14 +515,14 @@ export default function App() {
                       {/* Infinite marquee logo ribbon container */}
                       <div className="w-full relative overflow-hidden py-1 border-y border-zinc-200/5 mt-4">
                         {/* Edge fade gradients */}
-                        <div className={`absolute top-0 bottom-0 left-0 w-12 bg-gradient-to-r ${
+                        <div className={`absolute top-0 bottom-0 left-0 w-12 bg-linear-to-r ${
                           theme === "green" 
                             ? "from-[#030a05]" 
                             : theme === "dark" 
                               ? "from-[#09090b]" 
                               : "from-[#fcfcfc]"
                         } to-transparent z-10 pointer-events-none`} />
-                        <div className={`absolute top-0 bottom-0 right-0 w-12 bg-gradient-to-l ${
+                        <div className={`absolute top-0 bottom-0 right-0 w-12 bg-linear-to-l ${
                           theme === "green" 
                             ? "from-[#030a05]" 
                             : theme === "dark" 
@@ -745,7 +745,7 @@ export default function App() {
 
                     <div className="relative">
                       {/* Central trace line */}
-                      <div className="absolute top-1/2 left-0 w-full h-[1px] bg-zinc-850/50 hidden lg:block -translate-y-1/2"></div>
+                      <div className="absolute top-1/2 left-0 w-full h-px bg-zinc-850/50 hidden lg:block -translate-y-1/2"></div>
                       
                       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 relative z-10">
                         {[
@@ -1080,7 +1080,7 @@ export default function App() {
                                 </span>
                                 <span className="font-mono text-[10px] text-zinc-500">ms</span>
                               </div>
-                              <div className="w-full h-[2px] bg-zinc-900 mt-3 relative overflow-hidden">
+                              <div className="w-full h-0.5 bg-zinc-900 mt-3 relative overflow-hidden">
                                 <div 
                                   className="h-full bg-emerald-500 transition-all duration-500"
                                   style={{ 
@@ -1099,7 +1099,7 @@ export default function App() {
                                 </span>
                                 <span className="font-mono text-[10px] text-zinc-500">KB</span>
                               </div>
-                              <div className="w-full h-[2px] bg-zinc-900 mt-3 relative overflow-hidden">
+                              <div className="w-full h-0.5 bg-zinc-900 mt-3 relative overflow-hidden">
                                 <div 
                                   className="h-full bg-sky-500 transition-all duration-500"
                                   style={{ 
@@ -1118,7 +1118,7 @@ export default function App() {
                                 </span>
                                 <span className="font-mono text-[10px] text-zinc-500">%</span>
                               </div>
-                              <div className="w-full h-[2px] bg-zinc-900 mt-3 relative overflow-hidden">
+                              <div className="w-full h-0.5 bg-zinc-900 mt-3 relative overflow-hidden">
                                 <div 
                                   className="h-full bg-amber-500 transition-all duration-500"
                                   style={{ width: cfgStorageType === "client" ? "100%" : cfgCaching && cfgTelemetry ? "99%" : "90%" }}
@@ -1135,7 +1135,7 @@ export default function App() {
                                 </span>
                                 <span className="font-mono text-[10px] text-zinc-500">Days</span>
                               </div>
-                              <div className="w-full h-[2px] bg-zinc-900 mt-3 relative overflow-hidden">
+                              <div className="w-full h-0.5 bg-zinc-900 mt-3 relative overflow-hidden">
                                 <div 
                                   className="h-full bg-purple-500 transition-all duration-500"
                                   style={{ 
@@ -1432,7 +1432,7 @@ export default function App() {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center max-w-5xl mx-auto">
                       {/* Map visualization left */}
                       <div className="lg:col-span-7 flex flex-col space-y-4">
-                        <div className={`relative w-full h-[340px] border p-1 overflow-hidden bg-zinc-950/20 backdrop-blur-sm ${cardBgClass()}`}>
+                        <div className={`relative w-full h-85 border p-1 overflow-hidden bg-zinc-950/20 backdrop-blur-sm ${cardBgClass()}`}>
                           {/* Inner Iframe container exposing Google Maps of Nepal nodes */}
                           <iframe 
                             src={`https://maps.google.com/maps?q=${[
@@ -2491,7 +2491,7 @@ export default function App() {
                 <div className={`absolute inset-0 rounded-full border border-dashed animate-[spin_8s_linear_infinite] opacity-40 ${
                   theme === "green" ? "border-green-500" : theme === "dark" ? "border-zinc-500" : "border-zinc-300"
                 }`} />
-                <div className={`absolute -inset-2 rounded-full border border-zinc-500/10 animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite] ${
+                <div className={`absolute -inset-2 rounded-full border border-zinc-500/10 animate-pulse ${
                   theme === "green" ? "bg-green-500/5" : theme === "dark" ? "bg-zinc-500/5" : "bg-zinc-200/20"
                 }`} />
                 <div className={`absolute -inset-4 rounded-full opacity-30 blur-md ${
