@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import TorusKnotCanvas from "./components/TorusKnotCanvas";
 import AdminPanel from "./components/AdminPanel";
 import { motion, AnimatePresence } from "motion/react";
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { 
   Globe, 
   Smartphone, 
@@ -2555,6 +2556,7 @@ export default function App() {
           </div>
         )}
       </AnimatePresence>
+      <SpeedInsights />
     </div>
   );
 }
